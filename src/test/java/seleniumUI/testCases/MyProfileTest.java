@@ -64,7 +64,7 @@ public class MyProfileTest extends testBase {
 		myProfilePage.assertLoginSuccessfulMessageIsDisplayed();
 		extentTest.log(Status.INFO, "Login successful with the given credentails");
 		
-		
+		myProfilePage.clickOnJobs();
 		myProfilePage.clickOnRequestionRequest();
 		
 	}
