@@ -36,8 +36,13 @@ public class MyProfilePage extends seleniumHelper {
 	@FindBy(how = How.XPATH, using = "//div[contains(@class,'card-subtitle') and contains(.,'Emergency Phone Number:')]")
 	private WebElement emergencyphonenumberInfo;
 
-	@FindBy(how = How.ID, using = "password")
+	@FindBy(how = How.XPATH, using = "//a[contains(@href,'/app/rrf')]")
 	private WebElement requestionRequest;
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='accordion']//h2//div[contains(.,'Jobs')]")
+	private WebElement jobs;
+	
+
 
 	public MyProfilePage(WebDriver driver) {
 		super(driver);
@@ -82,10 +87,17 @@ public class MyProfilePage extends seleniumHelper {
 
 		waitforElementbePresent(emergencyphonenumberInfo);
 	}
+	
 
 	public void clickOnRequestionRequest() {
 
 		click(requestionRequest);
 	}
+	
+	public void clickOnJobs() {
+		click(jobs);
+	}
+	
+	
 
 }
